@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      padding: 20px;
+    }
+    .div1{
+      background-color: lightblue;
+    }
+    .div2{
+      background-color: lightcoral;
+    }
+    .div3{
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <h1>Division Principal</h1>
+    <div class="div2">
+      <h2>Division Secundaria</h2>
+      <div class="div3">Division Terciaria</div>
+    </div>
+  </div>
+  <script>
+    document.querySelector('.div1').addEventListener('click', ()=>console.log('Principal'))
+    document.querySelector('.div2').addEventListener('click', ()=>console.log('Secundaria'))
+    document.querySelector('.div3').addEventListener('click', ()=>console.log('Terciaria'))
+  </script>
+</body>
+</html>

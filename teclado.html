@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Eventos de teclado</h1>
+  <input></input>
+  <input></input>
+  <input></input>
+  <script>
+    document.querySelector('input').addEventListener('Keypress',(e)=>{
+      console.log(e.key);
+      console.log(e.keycode);
+      if (e.key=="Enter") {
+        e.target.nexElementSibling
+      }
+      
+    })
+  </script>
+</body>
+</html>
