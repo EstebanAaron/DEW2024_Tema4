@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Información</h1>
+  <ul></ul>
+  <div id="info"></div>
+  <script>
+    const data={
+      'Titulo 1': 'Parrafo1. Este es el contenido',
+      'Titulo 2': 'Parrafo2. Este es el contenido 2',
+      'Titulo 3': 'Parrafo3. Este es el contenido del titulo 3 porque clicaste en el titulo 3 que loko no?'
+    }
+
+    const list = document.querySelector('ul');
+    const info = document.getElementById('info')
+    
+    Object.keys(data).forEach(element => {
+      console.log(element);
+      
+    });
+    
+    
+    for (const element in data) {
+      const li = document.createElement('li');
+      li.textContent= element;
+      list.append(li);    
+    }
+
+    list.addEventListener('mouseover',(e)=> {
+      console.log(e.target);
+      
+      if (e.target.tagName == "LI") {
+        info.textContent= data[e.target.textContent]
+      }
+    
+    })
+  </script>
+</body>
+</html>
