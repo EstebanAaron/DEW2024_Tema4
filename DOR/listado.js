@@ -6,6 +6,7 @@ Object.values(PROVINCIAS).forEach(element => {
   const option = document.createElement('option');
   option.value = element.idProvincia;
   option.textContent = element.nombre;
+  option.setAttribute('required');
   lista1.append(option);
 });
 

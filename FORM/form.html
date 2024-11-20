@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="process.php" method="post" id="formID" name="formName" target="">
+    <input type="text" name="surname">
+    <input type="text" name="password">
+    <p>
+      <input type="radio" id="labelid1" name="radio" value="1">
+      <label for="labelid1">Opcion1</label>
+      
+      <label ><input type="radio" name="radio" id="" value="2">Opcion 2</label>
+    </p>
+    <p>
+      <label for=""><input type="checkbox" name="condicion" id="">Acepta las condiciones</label>
+    </p>
+    <p>
+     
+    </p>
+    <p><button type="submit">Enviar</button></p>
+  </form>
+  <script>
+    // 1. Con id
+    const formId = document.getElementById('formID');
+    
+    console.log("formid: ",formId);
+    // 2. Array de form
+    console.log(document.forms[0]);
+    // 3. Array por nombre
+    console.log(document.forms['formName']);
+    // 4. Array por id
+    console.log(document.forms['formID']);
+
+    
+    // const inputName = document.querySelector("input[name='surname']")
+    const inputName = formId.elements['surname'];
+
+    
+    formId.addEventListener('submit', (e) => {
+      e.preventDefault();
+      console.log('username ', inputName.value);
+      const optionChecked = document.querySelector("input[name='radio']:checked");
+      console.log('option: ', optionChecked.value);
+
+      // console.log('fruit: ', document.querySelector("input[name='frutas']:checked").value);
+      console.log('fruit: ', formId.elements['frutas'].value);
+      
+      console.log('condiciones :', formId.elements['condicion'].checked);
+      
+      
+    })
+    
+    const fruits = [
+  {id:1, name: "apple"},
+  {id:2, name: "banana"},
+  {id:3, name: "cherry"},
+  {id:4, name: "date"},
+  {id:5, name: "elderberry"},
+  {id:6, name: "fig"},
+  {id:7, name: "grape"},
+  {id:8, name: "honeydew"},
+  {id:9, name: "kiwi"},
+  {id:10, name: "lemon"},
+  {id:11, name: "mango"},
+  {id:12, name: "nectarine"},
+  {id:13, name: "orange"},
+  {id:14, name: "papaya"},
+  {id:15, name: "quince"}
+];
+
+const pFruits = document.createElement('table');
+let aux =0;
+let tr = document.createElement('tr');
+fruits.forEach(element => {
+  
+  const td = document.createElement('td')
+  const option = document.createElement('input');
+  const label = document.createElement('label');
+  label.innerHTML = element.name
+  option.type ='radio'
+  option.setAttribute('name','frutas')
+  option.value=element.id
+
+
+  label.prepend(option);
+  td.append(label)
+  tr.append(td)
+  aux++;
+  if (aux%5==0&&aux>0) {
+    pFruits.append(tr);
+    tr = document.createElement('tr')
+  }
+});
+
+const tFruits = document.createElement('table');
+let aux1 =0;
+
+fruits.forEach(element => {
+  
+  const td = document.createElement('td')
+  const option = document.createElement('input');
+  const label = document.createElement('label');
+  label.textContent = element.name
+  option.type ='checkbox'
+  option.id = "id"+element.id;
+  option.setAttribute('name','fruit[]')
+  option.value=element.id
+  label.htmlFor = option.id
+
+
+  
+  td.append(option, label)
+  tr.append(td)
+  aux1++;
+  if (aux1%5==0&&aux>0) {
+    tFruits.append(tr);
+    tr = document.createElement('tr')
+  }
+});
+
+
+formId.append(pFruits , tFruits);
+
+    
+  </script>
+</body>
+</html>
