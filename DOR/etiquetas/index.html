@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos para incrustar contenido</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #0078d7;
+            margin-top: 30px;
+        }
+        section {
+            margin: 20px 0;
+        }
+        code {
+            background: #75737388;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elementos para incrustar contenido</h1>
+
+    <section>
+        <h2>&lt;img&gt;</h2>
+        <p>Se utiliza para mostrar imágenes.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>src</code>: URL o ruta de la imagen.</li>
+            <li><code>alt</code>: Texto alternativo para accesibilidad o cuando la imagen no carga.</li>
+            <li><code>width</code> y <code>height</code>: Dimensiones de la imagen (píxeles o porcentaje).</li>
+        </ul>
+        <img src="archivos/imagen.jpeg" alt="Ejemplo de imagen" width="300">
+    </section>
+
+    <section>
+        <h2>&lt;iframe&gt;</h2>
+        <p>Permite incrustar otro documento HTML.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>src</code>: URL del contenido incrustado.</li>
+            <li><code>width</code> y <code>height</code>: Dimensiones del iframe.</li>
+            <li><code>title</code>: Texto para describir el iframe (accesibilidad).</li>
+            <li><code>allow</code>: Especifica permisos (e.g., reproducir videos).</li>
+            <li><code>sandbox</code>: Restringe funcionalidades (e.g., ejecución de scripts).</li>
+        </ul>
+        <iframe src="archivos/form.html" width="600" height="300" title="Iframe de ejemplo"></iframe>
+    </section>
+
+    <section>
+        <h2>&lt;embed&gt;</h2>
+        <p>Se usa para incrustar contenido multimedia o archivos externos.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>src</code>: URL del contenido a incrustar.</li>
+            <li><code>type</code>: Tipo MIME del contenido (e.g., <code>application/pdf</code>).</li>
+            <li><code>width</code> y <code>height</code>: Dimensiones del elemento.</li>
+        </ul>
+        <embed src="archivos/lorem-ipsum.pdf" type="application/pdf" width="600" height="400">
+    </section>
+
+    <section>
+        <h2>&lt;object&gt; y &lt;param&gt;</h2>
+        <p>El elemento <code>&lt;object&gt;</code> permite incrustar contenido externo, y <code>&lt;param&gt;</code> define parámetros adicionales.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>data</code>: URL del contenido a cargar.</li>
+            <li><code>type</code>: Tipo MIME del contenido.</li>
+            <li><code>width</code> y <code>height</code>: Dimensiones del elemento.</li>
+        </ul>
+        <object data="mypdf.pdf" type="application/pdf" width="600" height="400">
+            <param name="autoplay" value="false">
+            No se pudo cargar el contenido pulse aqui para <a href="archivos/lorem-ipsum.pdf">descargar</a>
+        </object>
+    </section>
+
+    <section>
+        <h2>&lt;video&gt; y &lt;source&gt;</h2>
+        <p>Se usa para reproducir videos.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>controls</code>: Muestra controles para reproducir, pausar, etc.</li>
+            <li><code>autoplay</code>: El video se reproduce automáticamente.</li>
+            <li><code>loop</code>: El video se repite en bucle.</li>
+            <li><code>poster</code>: Imagen que se muestra antes de reproducir el video.</li>
+        </ul>
+        <video controls width="600">
+            <source src="archivos/video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento <code>video</code>.
+        </video>
+    </section>
+
+    <section>
+        <h2>&lt;audio&gt;</h2>
+        <p>Se usa para reproducir audio.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>controls</code>: Muestra controles para reproducir, pausar, etc.</li>
+            <li><code>autoplay</code>: El audio se reproduce automáticamente.</li>
+            <li><code>loop</code>: El audio se repite en bucle.</li>
+        </ul>
+        <audio controls>
+            <source src="archivos/music.wav" type="audio/mpeg">
+            Tu navegador no soporta el elemento <code>audio</code>.
+        </audio>
+    </section>
+
+    <section>
+        <h2>&lt;track&gt;</h2>
+        <p>Se usa dentro de <code>&lt;video&gt;</code> o <code>&lt;audio&gt;</code> para añadir subtítulos.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>src</code>: URL del archivo de subtítulos.</li>
+            <li><code>kind</code>: Tipo de pista (<code>subtitles</code>, <code>captions</code>, etc.).</li>
+            <li><code>srclang</code>: Idioma de los subtítulos.</li>
+            <li><code>label</code>: Nombre descriptivo para los subtítulos.</li>
+            <li>nota: Para que algunos navegadores carguen archivos vtt es necesario a traves de un servidor </li>
+        </ul>
+        <video controls width="600">
+            <source src="archivos/video.mp4" type="video/mp4">
+            <track src="archivos/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+            Tu navegador no soporta el elemento <code>video</code>.
+        </video>
+    </section>
+
+    <section>
+        <h2>&lt;canvas&gt;</h2>
+        <p>Se usa para dibujar gráficos mediante JavaScript.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>width</code> y <code>height</code>: Dimensiones del área de dibujo.</li>
+        </ul>
+        <canvas id="canvas" width="300" height="150" style="border: 1px solid #000;"></canvas>
+        <script>
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(50, 50, 200, 50);
+        </script>
+    </section>
+
+    <section>
+        <h2>&lt;svg&gt;</h2>
+        <p>Se usa para gráficos vectoriales escalables.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>width</code> y <code>height</code>: Dimensiones del gráfico.</li>
+        </ul>
+        <svg width="200" height="200">
+            <circle cx="100" cy="100" r="50" stroke="black" stroke-width="3" fill="red"></circle>
+        </svg>
+    </section>
+</body>
+</html>

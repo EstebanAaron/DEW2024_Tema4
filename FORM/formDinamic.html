@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Formulario - Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Juego de Formulario - Drag and Drop</h1>
+
+    <div id="input-container">
+        <h2>Inputs disponibles</h2>
+    
+        <!-- Tipo: Texto -->
+        <div class="input-item" draggable="true" data-type="text">
+            <label for="text-input">Texto:</label>
+            <input type="text" id="text-input" placeholder="Escribe algo" required minlength="4">
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Contraseña -->
+        <div class="input-item" draggable="true" data-type="password">
+            <label for="password-input">Contraseña:</label>
+            <input type="password" id="password-input" placeholder="********" required minlength="8">
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Correo -->
+        <div class="input-item" draggable="true" data-type="email">
+            <label for="email-input">Correo:</label>
+            <input type="email" id="email-input" placeholder="correo@ejemplo.com" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Número -->
+        <div class="input-item" draggable="true" data-type="number">
+            <label for="number-input">Número:</label>
+            <input type="number" id="number-input" placeholder="1234" required min="1" max="100">
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Teléfono -->
+        <div class="input-item" draggable="true" data-type="tel">
+            <label for="tel-input">Teléfono:</label>
+            <input type="tel" id="tel-input" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: URL -->
+        <div class="input-item" draggable="true" data-type="url">
+            <label for="url-input">URL:</label>
+            <input type="url" id="url-input" placeholder="https://ejemplo.com" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Fecha -->
+        <div class="input-item" draggable="true" data-type="date">
+            <label for="date-input">Fecha:</label>
+            <input type="date" id="date-input" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Hora -->
+        <div class="input-item" draggable="true" data-type="time">
+            <label for="time-input">Hora:</label>
+            <input type="time" id="time-input" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Fecha y Hora -->
+        <div class="input-item" draggable="true" data-type="datetime-local">
+            <label for="datetime-input">Fecha y Hora:</label>
+            <input type="datetime-local" id="datetime-input" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Rango -->
+        <div class="input-item" draggable="true" data-type="range">
+            <label for="range-input">Rango:</label>
+            <input type="range" id="range-input" min="0" max="100">
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Color -->
+        <div class="input-item" draggable="true" data-type="color">
+            <label for="color-input">Color:</label>
+            <input type="color" id="color-input" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Checkbox -->
+        <div class="input-item" draggable="true" data-type="checkbox">
+            <label for="checkbox-input">Checkbox:</label>
+            <input type="checkbox" id="checkbox-input" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Radio -->
+        <div class="input-item" draggable="true" data-type="radio">
+            <label for="radio-input">Radio:</label>
+            <input type="radio" name="radio-group" id="radio-input" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Archivo -->
+        <div class="input-item" draggable="true" data-type="file">
+            <label for="file-input">Archivo:</label>
+            <input type="file" id="file-input" required>
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Oculto -->
+        <div class="input-item" draggable="true" data-type="hidden">
+            <label for="hidden-input">Oculto:</label>
+            <input type="hidden" id="hidden-input" value="valor oculto">
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Imagen -->
+        <div class="input-item" draggable="true" data-type="image">
+            <label for="image-input">Imagen:</label>
+            <input type="image" id="image-input" src="https://via.placeholder.com/100" alt="Imagen de prueba">
+            <span class="validation-message"></span>
+        </div>
+    
+        <!-- Tipo: Buscar -->
+        <div class="input-item" draggable="true" data-type="search">
+            <label for="search-input">Buscar:</label>
+            <input type="search" id="search-input" placeholder="Buscar..." required>
+            <span class="validation-message"></span>
+        </div>
+    </div>
+    
+
+    <div id="form-container">
+        <h2>Formulario</h2>
+        <form id="dynamic-form">
+            <!-- Inputs arrastrados aparecerán aquí -->
+        </form>
+        <button id="submit-btn">Enviar</button>
+        <button id="reset-btn">Resetear</button>
+        <button id="clear-btn">Vaciar formulario</button>
+    </div>
+
+    <script src="formDinamic.js"></script>
+</body>
+</html>
