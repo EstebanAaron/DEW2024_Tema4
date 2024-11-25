@@ -11,8 +11,8 @@ inputContainer.addEventListener("dragstart", (e) => {
     if (e.target.classList.contains("input-item")) {
         // console.log(e.target.getAttribute('data-type'));
         
-        // e.dataTransfer.setData("text/html", e.target.outerHTML); // Guarda el HTML del elemento arrastrado
-        e.dataTransfer.setData("text/plain", e.target.id); // Guarda el HTML del elemento arrastrado
+        e.dataTransfer.setData("text/html", e.target.outerHTML); // Guarda el HTML del elemento arrastrado
+        // e.dataTransfer.setData("text/plain", e.target.id); // Guarda el HTML del elemento arrastrado
     }
 });
 
@@ -26,8 +26,8 @@ formContainer.addEventListener("drop", (e) => {
     e.preventDefault();
     const inputHTML = e.dataTransfer.getData("text/html");
     const parser = new DOMParser();
-    // const inputElement = parser.parseFromString(inputHTML, "text/html").body.firstChild;
-    const inputElement = document.getElementById(e.dataTransfer.getData('text/plain'));
+    const inputElement = parser.parseFromString(inputHTML, "text/html").body.firstChild;
+    // const inputElement = document.getElementById(e.dataTransfer.getData('text/plain'));
 
     // Agregar validación al input
     const input = inputElement.querySelector("input");

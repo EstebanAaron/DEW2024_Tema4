@@ -1,6 +1,4 @@
-/*
-  Sergio Andres Arcila Laguna 2DAWBs
-*/
+
 const SPAN_NUMERO_STRONGS = document.querySelector("#numero_de_strongs");
 const LOS_STRONGS = document.querySelectorAll("strong");
 const INPUTS_MENU = document.querySelectorAll("menu input");
@@ -109,4 +107,5 @@ function verRestoAriculo() {
   for (let i = 0; i < articulo.children.length; i++) {
     articulo.children[i].style.display = "block";
   }
+  this.style.display = "none"
 }
