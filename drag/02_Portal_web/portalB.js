@@ -97,7 +97,7 @@ function crearLink() {
   let link = document.createElement("a");
   link.textContent = "Leer más..";
   link.href = "#";
-  link.addEventListener("click", verRestoAriculo);
+  link.addEventListener("click", verRestoAriculo,{once:true});
   leerMas.appendChild(link);
   return leerMas;
 }
