@@ -9,7 +9,10 @@ const clearBtn = document.getElementById("clear-btn");
 // Función para manejar el dragstart
 inputContainer.addEventListener("dragstart", (e) => {
     if (e.target.classList.contains("input-item")) {
-        e.dataTransfer.setData("text/html", e.target.outerHTML); // Guarda el HTML del elemento arrastrado
+        // console.log(e.target.getAttribute('data-type'));
+        
+        // e.dataTransfer.setData("text/html", e.target.outerHTML); // Guarda el HTML del elemento arrastrado
+        e.dataTransfer.setData("text/plain", e.target.id); // Guarda el HTML del elemento arrastrado
     }
 });
 
@@ -23,7 +26,8 @@ formContainer.addEventListener("drop", (e) => {
     e.preventDefault();
     const inputHTML = e.dataTransfer.getData("text/html");
     const parser = new DOMParser();
-    const inputElement = parser.parseFromString(inputHTML, "text/html").body.firstChild;
+    // const inputElement = parser.parseFromString(inputHTML, "text/html").body.firstChild;
+    const inputElement = document.getElementById(e.dataTransfer.getData('text/plain'));
 
     // Agregar validación al input
     const input = inputElement.querySelector("input");
@@ -65,7 +69,7 @@ submitBtn.addEventListener("click", (e) => {
 
     if (isValid) {
         alert("Formulario enviado correctamente.");
-        
+
     } else {
         alert("Corrige los errores antes de enviar.");
     }

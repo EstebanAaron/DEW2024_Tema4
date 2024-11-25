@@ -13,28 +13,28 @@
         <h2>Inputs disponibles</h2>
     
         <!-- Tipo: Texto -->
-        <div class="input-item" draggable="true" data-type="text">
+        <div class="input-item" draggable="true" id="text" data-type="text">
             <label for="text-input">Texto:</label>
             <input type="text" id="text-input" placeholder="Escribe algo" required minlength="4">
             <span class="validation-message"></span>
         </div>
     
         <!-- Tipo: Contraseña -->
-        <div class="input-item" draggable="true" data-type="password">
+        <div class="input-item" draggable="true" id="password" data-type="password">
             <label for="password-input">Contraseña:</label>
             <input type="password" id="password-input" placeholder="********" required minlength="8">
             <span class="validation-message"></span>
         </div>
     
         <!-- Tipo: Correo -->
-        <div class="input-item" draggable="true" data-type="email">
+        <div class="input-item" draggable="true" id="email" data-type="email">
             <label for="email-input">Correo:</label>
             <input type="email" id="email-input" placeholder="correo@ejemplo.com" required>
             <span class="validation-message"></span>
         </div>
     
         <!-- Tipo: Número -->
-        <div class="input-item" draggable="true" data-type="number">
+        <div class="input-item" draggable="true" id="number" data-type="number">
             <label for="number-input">Número:</label>
             <input type="number" id="number-input" placeholder="1234" required min="1" max="100">
             <span class="validation-message"></span>

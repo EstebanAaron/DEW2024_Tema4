@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="portalB.js" async></script>
+    <title>Document</title>
+    <style>
+      header,
+      menu,
+      main,
+      footer {
+        border: 2px dotted blue;
+        padding: 5px;
+      }
+
+      header div {
+        float: right;
+      }
+
+      menu ul {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      menu ul li {
+        display: inline-block;
+      }
+
+      main {
+        display: flex;
+      }
+
+      article {
+        border: 2px dashed red;
+        padding: 5px;
+        margin: 2px;
+      }
+
+      label {
+        margin: 2px 2px 2px 40px;
+      }
+
+      .verde {
+        color: green;
+      }
+
+      .rojo {
+        color: red;
+      }
+
+      .subrayado {
+        text-decoration: underline;
+      }
+
+      .italica {
+        font-style: italic;
+      }
+
+      .destacado {
+        background: lightyellow;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div><input type="search" placeholder="buscar..." /></div>
+      <h1>PORTAL WEB</h1>
+      <p>
+        El número de elementos con <strong>strong</strong> es
+        <span id="numero_de_strongs">XXX</span>
+      </p>
+    </header>
+    <menu>
+      <label for="italica">Poner en italica</label
+      ><input type="checkbox" id="italica" value="italica" />
+      <label for="subrayado">Poner en subrayado</label
+      ><input type="checkbox" id="subrayado" value="subrayado" />
+      <label for="verde">Poner en verde</label
+      ><input type="checkbox" id="verde" value="verde" />
+      <label for="rojo">Poner en rojo</label
+      ><input type="checkbox" id="rojo" value="rojo" />
+    </menu>
+    <main>
+      <article>
+        <h1>Artíulo 1</h1>
+        <h2>Subtitulo 1</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur
+          <strong>adipisicing elit</strong>. Iusto optio voluptates fugiat eaque
+          dolorem quod dignissimos consectetur iste, eius, deserunt
+          exercitationem nostrum alias quia id perspiciatis vero repudiandae,
+          porro commodi?
+        </p>
+        <p class="verde">
+          Veniam assumenda ipsum, sit error deserunt repellat obcaecati quaerat
+          porro? Dolor atque, at nobis consequatur expedita, placeat delectus
+          repellendus enim, ut optio libero minus? Aspernatur eligendi provident
+          facilis. Mollitia, beatae!
+        </p>
+        <p>
+          Asperiores blanditiis commodi omnis adipisci! Quod, eveniet voluptates
+          amet ab suscipit laborum ex quis doloribus ad aliquam repudiandae
+          repellat libero asperiores harum, consectetur voluptatibus mollitia
+          quidem corrupti, a illo exercitationem.
+        </p>
+        <ul>
+          <li class="verde">Listado 1</li>
+          <li>Listado 2</li>
+          <li><strong>Listado 3</strong></li>
+        </ul>
+        <p>
+          Voluptas, tempora maxime perferendis praesentium harum neque, qui
+          architecto corporis nesciunt obcaecati voluptates, error nemo
+          consectetur cumque porro maiores repellendus expedita suscipit in a
+          quo temporibus! Rerum unde ex error!
+        </p>
+      </article>
+      <article>
+        <h1>Artíulo 2</h1>
+        <h2>Subtitulo 2</h2>
+        <p>
+          <strong>Necessitatibus</strong> eos minima architecto nemo, amet
+          optio, quasi dicta adipisci ea sint, voluptatem quisquam neque
+          veritatis totam tempore incidunt asperiores animi voluptatum iusto
+          repudiandae qui possimus aperiam. Placeat, quis error!
+        </p>
+        <menu>
+          <ul>
+            <li><a href="#">item 1</a></li>
+            <li><a href="#">item 2</a></li>
+            <li><a href="#">item 3</a></li>
+          </ul>
+        </menu>
+        <p>
+          Repudiandae molestias odio facere officia ad aut magni! Deserunt
+          adipisci natus ducimus ipsa sed velit porro commodi ea. Porro
+          accusamus veritatis consequuntur aliquam accusantium! Delectus
+          laudantium alias reiciendis laboriosam maxime.
+        </p>
+        <p>
+          Nihil, harum cum veritatis dolores
+          <strong>voluptatibus</strong> itaque quasi iste eos ipsam id non
+          doloremque iure in sunt nulla dolor! Cupiditate porro provident, ad
+          modi sint vel necessitatibus rerum tenetur illo.
+        </p>
+        <p>
+          Commodi alias voluptatum sit repellat doloremque vel minus sunt quia
+          inventore! Illum officia dolores similique exercitationem eligendi est
+          nisi doloremque tenetur! Maxime ipsam sit quasi dolore animi et
+          voluptatum illum.
+        </p>
+      </article>
+      <article>
+        <h1 class="verde">Artíulo 3</h1>
+        <h2>Subtitulo 3</h2>
+        <p>
+          Odio porro soluta quis et magni
+          <span class="verde">doloremque pariatur cupiditate</span>, aperiam
+          officiis totam molestiae aliquam sit ratione temporibus ducimus quod
+          sapiente tempore consequuntur molestias ipsam facilis minus nisi aut
+          necessitatibus. Reprehenderit.
+        </p>
+        <p>
+          Ratione hic est at praesentium <strong>blanditiis</strong> ullam
+          sapiente vitae, assumenda, quaerat perspiciatis impedit placeat libero
+          nostrum temporibus, neque animi ducimus in quas fugiat iusto quo nemo
+          molestiae fuga! Recusandae, sunt!
+        </p>
+        <p>
+          Facilis quae, reprehenderit fuga aliquid, doloribus ducimus maiores
+          molestias consectetur animi quam rerum est! Maxime, eligendi maiores,
+          repellat inventore blanditiis, iusto sequi aliquam adipisci voluptas
+          minima error suscipit! Odit, animi.
+        </p>
+        <p>
+          Vitae, cupiditate eligendi ipsa accusantium molestias pariatur nemo,
+          dignissimos voluptas expedita deserunt perspiciatis fugiat impedit
+          placeat quo iste et natus sed quidem consequatur nam nulla quis, eos
+          corrupti distinctio. Aliquid?
+        </p>
+      </article>
+      <article>
+        <h1>Artíulo 4</h1>
+        <h2 class="verde">Subtitulo 4</h2>
+        <p>
+          Delectus error odit minima, vero harum quam recusandae quo quaerat
+          <strong>quasi</strong> et reprehenderit earum officiis necessitatibus
+          dolore id eos, vitae magni? Et nam repellat animi, aspernatur
+          inventore iure consequuntur earum!
+        </p>
+        <p>
+          Perferendis non asperiores aliquam nam consectetur quasi voluptatibus
+          atque iusto rem corporis impedit earum ab, a accusamus possimus
+          sapiente dicta ullam necessitatibus! Aspernatur sit voluptatem,
+          assumenda repellat voluptates doloremque hic.
+        </p>
+        <p>
+          Repellendus quaerat, nihil doloribus maxime in dolore quibusdam nobis
+          sint. Blanditiis soluta at beatae autem iure atque eos alias, ducimus
+          voluptatem doloribus consectetur provident assumenda numquam quo neque
+          placeat perspiciatis!
+        </p>
+        <p>
+          Minus, ullam, tenetur alias ratione incidunt quo enim animi, odit
+          nihil architecto exercitationem? Eum, iste aut iure recusandae, labore
+          sit nostrum corporis nulla temporibus tempora pariatur fuga beatae.
+          Alias, at.
+        </p>
+        <ul>
+          <li>producto 1</li>
+          <li><strong>producto</strong> 2</li>
+          <li>producto 3</li>
+          <li>producto 4</li>
+          <li>producto 5</li>
+        </ul>
+      </article>
+      <article class="verde">
+        <h1>Artíulo 5</h1>
+        <h2>Subtitulo 5</h2>
+        <p>
+          Dicta quasi <strong>dignissimos</strong> cumque aliquid, optio,
+          tempora ipsum dolor animi dolorem beatae mollitia atque ad vero. Est
+          ratione eligendi voluptatum aut nobis amet nihil sed officia quod nam,
+          aliquam dolorem.
+        </p>
+        <p>
+          Recusandae, vero nostrum accusamus, voluptate repudiandae sed, cumque
+          iste temporibus et inventore saepe incidunt nam fugiat ipsum illo eius
+          accusantium excepturi aliquam nulla sequi reiciendis? Tenetur tempore
+          quod porro accusantium!
+        </p>
+        <p>
+          Est veritatis aliquid dicta non eveniet! Sunt voluptate ratione, ullam
+          aut autem tenetur eum cum itaque expedita alias quidem, impedit
+          adipisci! Officia eligendi, animi molestiae necessitatibus ad rem
+          quisquam dolor!
+        </p>
+        <p>
+          Possimus assumenda optio aliquam, repudiandae pariatur commodi ipsa
+          illo facilis obcaecati illum fugit ipsam nulla sapiente magni mollitia
+          sunt eligendi tempore? Impedit autem nam ipsum quam eius debitis
+          distinctio fugit!
+        </p>
+      </article>
+    </main>
+    <footer>
+      <h1>Pie de página</h1>
+      <p><strong>Copyright</strong> y esas cosas</p>
+    </footer>
+  </body>
+</html>
