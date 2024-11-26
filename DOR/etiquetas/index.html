@@ -155,5 +155,61 @@
             <circle cx="100" cy="100" r="50" stroke="black" stroke-width="3" fill="red"></circle>
         </svg>
     </section>
+
+    <section>
+        <h2>&lt;map&gt; y &lt;area&gt;</h2>
+        <p>Se usan para definir áreas interactivas en una imagen, como mapas de enlaces o diagramas.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>map</code>: Define el mapa de áreas.</li>
+            <li><code>area</code>:
+                <ul>
+                    <li><code>shape</code>: Forma del área (rect, circle, poly).</li>
+                    <li><code>coords</code>: Coordenadas de la región.</li>
+                    <li><code>href</code>: Enlace asociado al área.</li>
+                    <li><code>alt</code>: Texto alternativo.</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="archivos/imagen2.jpeg" usemap="#furniture-map" alt="Mapa interactivo de ejemplo">
+        <map name="furniture-map">
+            <!-- Área de la silla -->
+            <area shape="rect" coords="155,80,249,203" href="#silla" alt="Silla" title="Silla">
+            <!-- Área del ordenador -->
+            <area shape="rect" coords="110,20,170,75" href="#ordenador" alt="Ordenador" title="Ordenador">
+            <!-- Área de la mesa -->
+            <area shape="rect" coords="0,40,249,203" href="#mesa" alt="Mesa" title="Mesa">
+            
+        </map>
+    </section>
+    
+    <section>
+        <h2>&lt;math&gt;</h2>
+        <p>Se usa para representar expresiones matemáticas con el estándar MathML.</p>
+        <p><strong>Atributos más comunes:</strong></p>
+        <ul>
+            <li><code>xmlns</code>: Espacio de nombres MathML.</li>
+            <li><code>display</code>: Formato de la fórmula (block o inline).</li>
+        </ul>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+                <msup>
+                    <mi>a</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo>+</mo>
+                <msup>
+                    <mi>b</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo>=</mo>
+                <msup>
+                    <mi>c</mi>
+                    <mn>2</mn>
+                </msup>
+            </mrow>
+        </math>
+    </section>
 </body>
 </html>
+
